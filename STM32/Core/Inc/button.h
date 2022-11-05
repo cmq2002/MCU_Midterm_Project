@@ -11,7 +11,6 @@
 
 int isButtonPressed();
 int isButtonPressedLong();
-int isAnyButtonPressed();
 
 void getKeyInput();
 

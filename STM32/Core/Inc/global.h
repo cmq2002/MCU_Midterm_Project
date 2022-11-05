@@ -12,7 +12,7 @@
 #define INCREASE 2
 #define DECREASE 3
 #define TOGGLE 4
-#define STANDBY 6
+#define STANDBY 10
 
 // Threshold for counter
 #define UPPER_BOUND 9
