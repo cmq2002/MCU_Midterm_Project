@@ -19,7 +19,7 @@ void fsm_simple_buttons_run(void){
 		case TOGGLE:
 			if (timer1_flag == 1){
 				toggleRED();
-				setTimer1(50);
+				setTimer1(100);
 			}
 			break;
 		default:
@@ -60,6 +60,8 @@ void fsm_simple_buttons_run(void){
 			}
 			break;
 		case INCREASE:
+			if (isButtonPressed(BUTTON1)==1)
+				status2 = RESET;
 			if (isButtonPressed(BUTTON2)==1){
 				status2 = INCREASE;
 				counter += 1;
@@ -72,8 +74,15 @@ void fsm_simple_buttons_run(void){
 				if (counter < LOWER_BOUND)
 					setCounter();
 			}
+			if (isButtonPressedLong(BUTTON2)==1){
+				counter += 1;
+				if (counter > UPPER_BOUND)
+					resetCounter();
+			}
 			break;
 		case DECREASE:
+			if (isButtonPressed(BUTTON1)==1)
+				status2 = RESET;
 			if (isButtonPressed(BUTTON2)==1){
 				status2 = INCREASE;
 				counter += 1;
@@ -82,6 +91,11 @@ void fsm_simple_buttons_run(void){
 			}
 			if (isButtonPressed(BUTTON3)==1){
 				status2 = DECREASE;
+				counter -= 1;
+				if (counter < LOWER_BOUND)
+					setCounter();
+			}
+			if (isButtonPressedLong(BUTTON3)==1){
 				counter -= 1;
 				if (counter < LOWER_BOUND)
 					setCounter();
@@ -91,19 +105,5 @@ void fsm_simple_buttons_run(void){
 			break;
 	}
 
-	// Display counter
-	switch (status3){
-		case INIT:
-			status3 = DISP;
-			setTimer2(100);
-			break;
-		case DISP:
-			if (timer2_flag == 1){
-				display7SEG(counter);
-				setTimer2(50);
-			}
-			break;
-		default:
-			break;
-	}
+	display7SEG(counter);
 }

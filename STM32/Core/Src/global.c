@@ -2,11 +2,10 @@
 
 int status1 = 0;
 int status2 = 0;
-int status3 = 0;
 int counter = 0;
 
 void initCounter(){
-	counter = DISP;
+	counter = 2;
 }
 
 void resetCounter(){
@@ -20,5 +19,4 @@ void setCounter(){
 void initVar(void){
 	status1 = INIT;
 	status2 = INIT;
-	status3 = INIT;
 }

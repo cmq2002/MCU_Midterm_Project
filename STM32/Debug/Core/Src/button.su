@@ -2,4 +2,5 @@ button.c:15:5:isButtonPressed	16	static
 button.c:23:5:isButtonPressedLong	16	static
 button.c:31:6:singlePressProcess	16	static
 button.c:35:6:longPressProcess	16	static
-button.c:39:6:getKeyInput	16	static
+button.c:39:6:ignoreSinglePress	16	static
+button.c:43:6:getKeyInput	16	static

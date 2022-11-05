@@ -11,8 +11,8 @@
 #define RESET 1
 #define INCREASE 2
 #define DECREASE 3
-#define TOGGLE 4
 #define DISP 5
+#define TOGGLE 4
 
 // Threshold for counter
 #define UPPER_BOUND 9
@@ -27,7 +27,6 @@
 /*-------------------------------Global Variables------------------------------*/
 extern int status1; //Use to blink Led
 extern int status2; //Use to modify counter
-extern int status3; //Use to display 7SEG Led
 extern int counter;
 
 void initCounter(void);
