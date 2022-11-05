@@ -1,2 +1,4 @@
-global.c:34:6:initWaitingTime	4	static
-global.c:40:6:initVar	4	static
+global.c:8:6:initCounter	4	static
+global.c:12:6:resetCounter	4	static
+global.c:16:6:setCounter	4	static
+global.c:20:6:initVar	4	static

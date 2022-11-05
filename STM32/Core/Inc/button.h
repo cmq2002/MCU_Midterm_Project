@@ -7,11 +7,9 @@
 #define NORMAL_STATE GPIO_PIN_SET
 #define PRESSED_STATE GPIO_PIN_RESET
 #define THRESHOLD1 300
-#define THRESHOLD2 50
 
 int isButtonPressed();
 int isButtonPressedLong();
-int isButtonPressedDouble();
 
 void getKeyInput();
 
