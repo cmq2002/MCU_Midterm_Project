@@ -3,17 +3,11 @@
 int status1 = 0;
 int status2 = 0;
 int counter = 0;
+int countDown10s = 0;
 
 void initCounter(){
-	counter = 2;
-}
-
-void resetCounter(){
-	counter = LOWER_BOUND;
-}
-
-void setCounter(){
-	counter = UPPER_BOUND;
+	counter = 6;
+	countDown10s = STANDBY;
 }
 
 void initVar(void){

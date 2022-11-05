@@ -28,6 +28,12 @@ int isButtonPressedLong(int index){
 	return 0;
 }
 
+int isAnyButtonPressed(){
+	if (isButtonPressed(BUTTON1)==0 && isButtonPressed(BUTTON2)==0 && isButtonPressed(BUTTON3)==0)
+		return 0;
+	return 1;
+}
+
 void singlePressProcess(int index){
 	button_flag[index] = 1;
 }

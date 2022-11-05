@@ -11,8 +11,8 @@
 #define RESET 1
 #define INCREASE 2
 #define DECREASE 3
-#define DISP 5
 #define TOGGLE 4
+#define STANDBY 6
 
 // Threshold for counter
 #define UPPER_BOUND 9
@@ -28,10 +28,9 @@
 extern int status1; //Use to blink Led
 extern int status2; //Use to modify counter
 extern int counter;
+extern int countDown10s;
 
 void initCounter(void);
-void resetCounter(void);
-void setCounter(void);
 void initVar(void);
 
 #endif /* INC_GLOBAL_H_ */

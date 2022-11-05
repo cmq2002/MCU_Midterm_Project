@@ -93,13 +93,17 @@ int main(void)
   HAL_TIM_Base_Start_IT (&htim2);
   initCounter();
   initVar();
+  setTimer2(100);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-
+	  if (timer2_flag == 1){
+		  off_mode();
+		  setTimer2(100);
+	  }
 	  fsm_simple_buttons_run();
     /* USER CODE END WHILE */
 

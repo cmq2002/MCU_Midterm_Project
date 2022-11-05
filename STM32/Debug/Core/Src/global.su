@@ -1,4 +1,2 @@
-global.c:7:6:initCounter	4	static
-global.c:11:6:resetCounter	4	static
-global.c:15:6:setCounter	4	static
-global.c:19:6:initVar	4	static
+global.c:8:6:initCounter	4	static
+global.c:13:6:initVar	4	static

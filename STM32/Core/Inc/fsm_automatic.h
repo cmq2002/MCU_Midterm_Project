@@ -11,6 +11,7 @@
 #include "main.h"
 #include "global.h"
 
+void off_mode();
 void fsm_simple_buttons_run();
 
 #endif /* INC_FSM_AUTOMATIC_H_ */
